@@ -1,26 +1,97 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: rgb(224, 224, 224);
+  color: black;
   width: 100%;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.game-board {
-  background-color: rgb(51, 51, 51);
-  width: 60%;
-  height: 60vh;
-  margin: 10% auto;
+.header {
+  background-image: url(../img/turtle_header.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 3vh;
+  width: 75vw;
+  height: 20vh;
+  display: flex;
+}
+
+.gameBoard {
+  width: 80%;
+  height: 70vh;
+  margin: 0px auto;
+  margin-top: 1vh;
   border-radius: calc(1vw + 1vh);
-  border: 2px white solid;
+  /*border: 2px white solid;*/
 }
 
-.game-board > div {
-  background-color: red;
-  width: 1%;
-  height: 2vh;
+.cardContainer {
+  perspective: calc(5vw + 5vh);
   float: left;
+  transition: transform 1s;
+  margin: 1vw;
+  width: calc(7vw + 7vh);
+  height: calc(7vw + 7vh);
+}
+
+.card {
+  width: calc(7vw + 7vh);
+  height: calc(7vw + 7vh);
   margin: 1vw;
   font-size: 60px;
   cursor: pointer;
   text-align: center;
+  border-radius: 100%;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.7), inset 5px 5px 10px 2px rgba(255, 255, 255, 0.7);
+  border: 1px solid white;
+  transform-style: preserve-3d;
+  transition: transform .3s ease;
+  backface-visibility: hidden;
+  position: relative;
+}
+
+.front, .back {
+  position: absolute;
+  border-radius: 100%;
+  top: 0;
+  left: 0;
+  width: calc(7vw + 7vh);
+  height: calc(7vw + 7vh);
+  backface-visibility: hidden;
+}
+
+.front {
+  background-image: url(../img/shell3.png);
+  background-position: 50% 70%;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.7), inset 5px 5px 10px 2px rgba(255, 255, 255, 0.7);
+}
+
+.back {
+  top: 0;
+  left: 0;
+  background: red;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.7), inset 5px 5px 10px 2px rgba(255, 255, 255, 0.7);
+  backface-visibility: hidden;
+  transform: rotateY( 180deg );
+}
+
+.leo {
+  background-image: url(../img/leo.png);
+}
+
+.rafael {
+  background-color: red;
+}
+
+.mike {
+  background-color: green;
+}
+
+.donatello {
+  background-color: orange;
 }

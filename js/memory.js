@@ -1,6 +1,24 @@
 "use strict";
 
-const cardArray = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
+const cardArray = [
+  'Leonardo',
+  'Leonardo',
+  'Michelangelo',
+  'Michelangelo',
+  'Rafael', 
+  'Rafael',
+  'Donatello',
+  'Donatello',
+  'Splinter',
+  'Splinter',
+  'April',
+  'April',
+  'Shredder',
+  'Shredder',
+  'Kraang',
+  'Kraang'
+];
+
 let compareArray = [];
 let cardsFlipped = 0;
 
@@ -18,10 +36,12 @@ function newGame(){
     const card = document.createElement("div");
     card.classList.add('card');
     card.classList.add(`${index}`);
+
     const front = document.createElement("div");
     front.classList.add('front');
     const back = document.createElement("div");
     back.classList.add('back', `${currentValue}`);
+    back.innerHTML = `<p>${currentValue}</p>`;
 
     const gameBoard = document.querySelector('.gameBoard');
     gameBoard.appendChild(cardContainer); //Adds the container element to the game board

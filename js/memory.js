@@ -5,7 +5,7 @@ const cardArray = [
   'Leonardo',
   'Michelangelo',
   'Michelangelo',
-  'Rafael', 
+  'Rafael',
   'Rafael',
   'Donatello',
   'Donatello',
@@ -25,23 +25,29 @@ let cardsFlipped = 0;
 function newGame(){
 
   console.log(compareArray);
+  console.log(cardArray);
+
 
   cardArray.forEach(function(currentValue, index){
 
     console.log(index);
     const cardContainer = document.createElement("div");
     cardContainer.classList.add('cardContainer');
-    cardContainer.dataset.value = `${currentValue}`;
+
 
     const card = document.createElement("div");
     card.classList.add('card');
-    card.classList.add(`${index}`);
+    card.dataset.value = `${currentValue}`;
+
 
     const front = document.createElement("div");
     front.classList.add('front');
+
+
     const back = document.createElement("div");
     back.classList.add('back', `${currentValue}`);
     back.innerHTML = `<p>${currentValue}</p>`;
+
 
     const gameBoard = document.querySelector('.gameBoard');
     gameBoard.appendChild(cardContainer); //Adds the container element to the game board
@@ -49,14 +55,16 @@ function newGame(){
     card.appendChild(front);
     card.appendChild(back);
 
+
     card.addEventListener('click', function(){
 
       if (compareArray.length < 2) {
 
         card.classList.add('back');
         console.log(card);
-        const value = cardContainer.dataset.value;
-        compareArray.push(value);
+        compareArray.push(card.dataset.value);
+
+        console.log(compareArray);
 
         if (compareArray.length > 1) {
 
@@ -66,30 +74,34 @@ function newGame(){
 
             cardsFlipped += 2;
             compareArray = [];
+            console.log(compareArray);
+            console.log(cardsFlipped);
           }
           else {
 
             console.log('No match!');
 
-            const test = compareArray[0];
+            function flipBack(){
+              console.log(compareArray);
 
-            console.log(test);
+              compareArray.forEach(function(currentValue){
 
-            const flipBack_1 = document.getElementsByClassName(compareArray[0]);
-            const flipBack_2 = document.getElementsByClassName(compareArray[1]);
-            console.log(flipBack_1);
-            console.log(flipBack_2);
-            card.classList.add('back');
-            flipBack_1.classList.remove('back');
-            flipBack_2.classList.remove('back');
+                const flipBack = document.querySelector(`.card[data-value=${currentValue}]`);
 
-            compareArray = [];
+                flipBack.classList.remove('back');
+
+              })
+
+              compareArray = [];
+              console.log(compareArray);
+
+            }
+
+            setTimeout(flipBack, 400);
 
           }
 
         }
-        console.log(cardsFlipped);
-        console.log(compareArray);
 
       }
 
@@ -99,3 +111,26 @@ function newGame(){
 
 
 }
+
+
+
+
+
+// function flipBack2(){
+//
+// const currentValue1 = compareArray[0];
+// const currentValue2 = compareArray[1];
+//
+// console.log(currentValue1);
+// console.log(currentValue2);
+//
+// const flipBack1 = document.querySelector(`.card[data-value=${currentValue1}]`);
+// const flipBack2 = document.querySelector(`.card[data-value=${currentValue2}]`);
+//
+// flipBack1.classList.remove('back');
+// flipBack2.classList.remove('back');
+//
+// compareArray = [];
+//
+//
+// }

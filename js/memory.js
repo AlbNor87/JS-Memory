@@ -24,10 +24,6 @@ let idArray = [];
 let cardsFlipped = 0;
 
 //Still left to do:
-//Add shuffle function *
-//Add winning condition
-//Add a reset button
-//Make mobile friendly *
 //Try in firefox *
 //Comment code
 //Test on friends computers
@@ -99,7 +95,7 @@ function newGame(){
 
               function reset() {
 
-                alert("Congratulations! You cleared the board... Generating new game!");
+                alert("Cowabunga! You cleared the board... Generating new game!");
 
                 //Wipe the game board and generate a new game
                 document.querySelector('.gameBoard').innerHTML = "";

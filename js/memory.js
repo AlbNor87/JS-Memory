@@ -20,7 +20,17 @@ const cardArray = [
 ];
 
 let compareArray = [];
+let idArray = [];
 let cardsFlipped = 0;
+
+//Still left to do:
+//Add shuffle function
+//Add winning condition
+//Make mobile friendly
+//Try in firefox
+//Test on friends computers
+//Add readme with installation instructions
+
 
 function newGame(){
 
@@ -38,6 +48,7 @@ function newGame(){
     const card = document.createElement("div");
     card.classList.add('card');
     card.dataset.value = `${currentValue}`;
+    card.dataset.id = `${index}`;
 
 
     const front = document.createElement("div");
@@ -63,6 +74,7 @@ function newGame(){
         card.classList.add('back');
         console.log(card);
         compareArray.push(card.dataset.value);
+        idArray.push(card.dataset.id)
 
         console.log(compareArray);
 
@@ -74,6 +86,7 @@ function newGame(){
 
             cardsFlipped += 2;
             compareArray = [];
+            idArray = [];
             console.log(compareArray);
             console.log(cardsFlipped);
           }
@@ -82,18 +95,20 @@ function newGame(){
             console.log('No match!');
 
             function flipBack(){
+
               console.log(compareArray);
+              console.log(idArray);
 
-              compareArray.forEach(function(currentValue){
-
-                const flipBack = document.querySelector(`.card[data-value=${currentValue}]`);
-
+              idArray.forEach(function(currentValue){
+                console.log('Flipback done');
+                const flipBack = document.querySelector(`.card[data-id="${currentValue}"]`);
+                console.log(flipBack);
+                console.log(currentValue);
                 flipBack.classList.remove('back');
-
               })
 
               compareArray = [];
-              console.log(compareArray);
+              idArray = [];
 
             }
 

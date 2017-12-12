@@ -14,29 +14,44 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  margin: auto;
   margin-top: 3vh;
   width: 75vw;
   height: 20vh;
   display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-left: 3%;
+}
+
+.header h1  {
+  text-align: center;
+  font-size: calc(0.5vw + 2vh);
+  margin: 0;
+  margin-bottom: -2%;
+  letter-spacing: 1vw;
+  font-family: 'Frijole', cursive;
+  color: white;
 }
 
 .gameBoard {
   width: 80%;
-  height: 70vh;
   margin: 0px auto;
-  margin-top: 1vh;
+  margin-top: calc(2vw + 2vh);
+  margin-bottom: calc(2vw + 2vh);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
 }
 
 .cardContainer {
   perspective: calc(5vw + 5vh);
   transition: transform 1s;
-  margin: 1vw;
   width: calc(7vw + 7vh);
   height: calc(7vw + 7vh);
+  margin: 2%;
 }
 
 .card {
@@ -60,7 +75,7 @@ body {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  /*box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.7), inset 5px 5px 10px 2px rgba(255, 255, 255, 0.7);*/
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.7), inset 5px 5px 10px 2px rgba(255, 255, 255, 0.7);
 }
 
 .front {
@@ -74,7 +89,7 @@ body {
 .back {
   display: flex;
   background-position: 50% 70%;
-  background-size: 90%;
+  background-size: contain;
   backface-visibility: hidden;
   transform: rotateY( 180deg );
   color: white;
@@ -83,7 +98,6 @@ body {
   justify-content: center;
   font-family: 'Quicksand', sans-serif;
 }
-
 
 
 .Leonardo {

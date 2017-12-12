@@ -24,17 +24,21 @@ let idArray = [];
 let cardsFlipped = 0;
 
 //Still left to do:
-//Add shuffle function
+//Add shuffle function *
 //Add winning condition
-//Make mobile friendly
-//Try in firefox
+//Add a reset button
+//Make mobile friendly *
+//Try in firefox *
+//Comment code
 //Test on friends computers
 //Add readme with installation instructions
 
 
 function newGame(){
 
-  console.log(compareArray);
+  console.log(cardArray);
+  cardArray.sort(function() { return 0.5 - Math.random() });
+
   console.log(cardArray);
 
 
@@ -89,6 +93,23 @@ function newGame(){
             idArray = [];
             console.log(compareArray);
             console.log(cardsFlipped);
+
+            //Check to see if the whole board is cleared
+            if (cardsFlipped == cardArray.length){
+
+              function reset() {
+
+                alert("Congratulations! You cleared the board... Generating new game!");
+
+                //Wipe the game board and generate a new game
+                document.querySelector('.gameBoard').innerHTML == "";
+                newGame();
+              }
+
+              setTimeout(reset, 1000);
+
+            }
+
           }
           else {
 
@@ -126,26 +147,3 @@ function newGame(){
 
 
 }
-
-
-
-
-
-// function flipBack2(){
-//
-// const currentValue1 = compareArray[0];
-// const currentValue2 = compareArray[1];
-//
-// console.log(currentValue1);
-// console.log(currentValue2);
-//
-// const flipBack1 = document.querySelector(`.card[data-value=${currentValue1}]`);
-// const flipBack2 = document.querySelector(`.card[data-value=${currentValue2}]`);
-//
-// flipBack1.classList.remove('back');
-// flipBack2.classList.remove('back');
-//
-// compareArray = [];
-//
-//
-// }

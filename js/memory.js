@@ -33,9 +33,9 @@ let cardsFlipped = 0;
 //Test on friends computers
 //Add readme with installation instructions
 
-
 function newGame(){
 
+  cardsFlipped = 0;
   console.log(cardArray);
   cardArray.sort(function() { return 0.5 - Math.random() });
 
@@ -102,11 +102,11 @@ function newGame(){
                 alert("Congratulations! You cleared the board... Generating new game!");
 
                 //Wipe the game board and generate a new game
-                document.querySelector('.gameBoard').innerHTML == "";
+                document.querySelector('.gameBoard').innerHTML = "";
                 newGame();
               }
 
-              setTimeout(reset, 1000);
+              setTimeout(reset, 400);
 
             }
 
@@ -144,6 +144,20 @@ function newGame(){
     });
 
   });
+
+  const button = document.querySelector(".button");
+  button.addEventListener('click', function(){
+
+  document.querySelector('.gameBoard').innerHTML = "";
+
+  newGame();
+
+  compareArray = [];
+  idArray = [];
+
+  console.log('The game was reset!');
+
+  })
 
 
 }

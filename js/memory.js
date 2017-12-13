@@ -24,10 +24,12 @@ let idArray = [];
 let cardsFlipped = 0;
 
 //Still left to do:
-//Try in firefox *
-//Comment code
-//Test on friends computers
-//Add readme with installation instructions
+// Try in firefox *
+// Comment code
+// Test on friends computers
+// Add readme with installation instructions
+// läs igenom kravlistan på git
+// .editorconfig
 
 function newGame(){
 

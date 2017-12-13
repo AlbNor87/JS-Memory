@@ -1,11 +1,11 @@
 # Teenage Mutant Ninja Turtles Memory Game
 
-### This game is written entirely in html, css and javascript.
+#### This game is written entirely in html, css and javascript!
 
 ## Installation
-- Simply download the repository from GitHub: https://github.com/AlbNor87/JS-Memory
+- Simply clone or download the repository from GitHub: https://github.com/AlbNor87/JS-Memory
 - Open the folder and find the index.html file
-- Open it in your favourite browser and enjoy!
+- Open that file in your favourite browser and enjoy the game!
 
 If you don't want to download the game but still want to play it follow the link bellow:
 http://www.albertnorberg.com/memory
@@ -28,12 +28,15 @@ http://www.albertnorberg.com/memory
 - CSS
 - Javascript
 
+## Tested in:
+- Google Chrome
+- Mozilla Firefox
+
 ## Author
 Albert Norberg
 
-#### Test users
+#### Tested by:
 - Andre Robsahm
 - Christopher Mattsson
-
 ---
 _Albert Norberg, 2017_

@@ -11,6 +11,8 @@
 If you don't want to download the game but still want to play it click on the link below:
 http://www.albertnorberg.com/memory
 
+<img src="https://media.giphy.com/media/cFdHXXm5GhJsc/giphy.gif" alt="turtleinstalling" width="50%">
+
 ### Instructions
 - Simply click on the cards you want to flip
 - Use your memory

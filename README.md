@@ -1,19 +1,20 @@
 # Teenage Mutant Ninja Turtles Memory Game
 
-#### This game is written entirely in html, css and javascript!
+#### This game was written entirely in HTML, CSS and JavaScript!
 
 ## Installation
 - Simply clone or download the repository from GitHub: https://github.com/AlbNor87/JS-Memory
 - Open the folder and find the index.html file
 - Open that file in your favourite browser and enjoy the game!
 
-If you don't want to download the game but still want to play it follow the link bellow:
+If you don't want to download the game but still want to play it click on the link below:
 http://www.albertnorberg.com/memory
 
 ### Instructions
-- Begin the game by clicking one of the cards marked with the LOTR-logo
-- Find the 8 pairs
-- Play again!
+- Simply click on the cards you want to flip
+- Use your memory
+- Find the 8 matching pairs to win the game
+- Click the reset button anytime to start from scratch
 
 ## The Assignment
 - Create a memory game only using HTML, CSS and JavaScript

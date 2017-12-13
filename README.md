@@ -1,5 +1,6 @@
 # Teenage Mutant Ninja Turtles Memory Game
-<img src="https://media.giphy.com/media/yJztLFIT4dANq/giphy.gif" alt="teenagemutantninjaturtles" width="100%">
+<img src="https://media.giphy.com/media/SNiNF3Y4mru00/giphy.gif" alt="teenagemutantninjaturtles" width="100%">
+
 #### This game was written entirely in HTML, CSS and JavaScript!
 
 ### Installation
@@ -15,6 +16,8 @@ http://www.albertnorberg.com/memory
 - Use your memory
 - Find the 8 matching pairs to win the game
 - Click the reset button at anytime to start a new game
+
+<img src="https://media.giphy.com/media/yJztLFIT4dANq/giphy.gif" alt="teenagemutantninjaturtles" width=“50%”>
 
 ## The Assignment
 - Create a memory game only using HTML, CSS and JavaScript

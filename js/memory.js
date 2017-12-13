@@ -1,5 +1,13 @@
 "use strict";
+//Still left to do:
+// Try in firefox *
+// Comment code
+// Test on friends computers
+// Add readme with installation instructions
+// läs igenom kravlistan på git
+// .editorconfig
 
+//This is the array tha holds all of the memory cards
 const cardArray = [
   'Leonardo',
   'Leonardo',
@@ -19,26 +27,28 @@ const cardArray = [
   'Kraang'
 ];
 
+
+//This array we use to hold and compare the two currently flipped cards
 let compareArray = [];
+
+
+//This array keeps trak of the specific id number of the currently flipped cards
 let idArray = [];
+
+
+//This variable keeps track of how many cards has been succesfully paired
+//When it reaches 16(the length of the card array) the player has won
 let cardsFlipped = 0;
 
-//Still left to do:
-// Try in firefox *
-// Comment code
-// Test on friends computers
-// Add readme with installation instructions
-// läs igenom kravlistan på git
-// .editorconfig
 
+//This function generates a new game
 function newGame(){
 
+  //We begin by making sure this variable is set to zero
   cardsFlipped = 0;
-  console.log(cardArray);
+
+  //Then we randomly sort our array of memory cards
   cardArray.sort(function() { return 0.5 - Math.random() });
-
-  console.log(cardArray);
-
 
   cardArray.forEach(function(currentValue, index){
 

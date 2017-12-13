@@ -1,6 +1,6 @@
 body {
   background-color: #0a84b3;
-  color: black;
+  color: white;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -16,8 +16,8 @@ body {
   background-size: contain;
   margin: auto;
   margin-top: 3vh;
-  width: 75vw;
-  height: 20vh;
+  width: 70vw;
+  height: 17vh;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -26,24 +26,22 @@ body {
 
 .header h1  {
   text-align: center;
-  font-size: calc(0.5vw + 2vh);
+  font-size: calc(0.4vw + 1.8vh);
   margin: 0;
   margin-bottom: -2%;
   letter-spacing: 1vw;
   font-family: 'Frijole', cursive;
-  color: white;
 }
 
 .gameBoard {
-  width: 80%;
+  width: 70%;
   margin: 0px auto;
   margin-top: calc(2vw + 2vh);
-  margin-bottom: calc(2vw + 2vh);
+  margin-bottom: calc(1vw + 1vh);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;2
-
 }
 
 .cardContainer {
@@ -53,13 +51,6 @@ body {
   height: calc(6vw + 6vh);
   margin: 1vw;
 }
-
-/*@-moz-document url-prefix() {
-    .cardContainer {
-        margin-top: 1.5%;
-    }
-}*/
-
 
 .card {
   width: 100%;
@@ -72,7 +63,6 @@ body {
   transition: transform .3s ease;
   backface-visibility: hidden;
   position: relative;
-
 }
 
 .card:hover {
@@ -111,34 +101,44 @@ body {
   background-size: contain;
   backface-visibility: hidden;
   transform: rotateY( 180deg );
-  color: white;
   font-size: calc(0.5vw + 0.5vh);
   align-items: flex-end;
   justify-content: center;
   font-family: 'Quicksand', sans-serif;
 }
 
+.back:hover {
+  box-shadow: 0px 0px 10px 2px #75b600, inset 5px 5px 10px 2px rgba(255, 255, 255, 0.7);
+}
+
 .Leonardo {
   background-image: url(../img/leo.png);
 }
+
 .Rafael {
   background-image: url(../img/rafael.png);
 }
+
 .Michelangelo {
   background-image: url(../img/mike.png);
 }
+
 .Donatello {
   background-image: url(../img/donatello.png);
 }
+
 .Splinter {
   background-image: url(../img/splinter.png);
 }
+
 .April {
   background-image: url(../img/april.png);
 }
+
 .Shredder {
   background-image: url(../img/shredder.png);
 }
+
 .Kraang {
   background-image: url(../img/crang.png);
 }
@@ -146,13 +146,10 @@ body {
 .button {
   text-align: center;
   font-size: calc(0.5vw + 2vh);
-  margin: 0;
-  margin-bottom: -2%;
+  margin-top: 0;
+  margin-bottom: 2%;
   letter-spacing: 1vw;
   font-family: 'Frijole', cursive;
-  color: white;
-  margin: 1vh;
-  border: none;
   cursor: pointer;
   transition: letter-spacing .3s ease, font-size .3s ease;
 }
@@ -161,7 +158,6 @@ body {
   text-shadow: 0px 0px 10px #75b600;
   font-size: calc(0.6vw + 2.2vh);
   letter-spacing: 1.5vw;
-  border: none;
 }
 
 .button:active {
@@ -169,5 +165,4 @@ body {
   text-shadow: 0px 0px 10px #000000;
   font-size: calc(0.6vw + 2.2vh);
   letter-spacing: 1.5vw;
-  border: none;
 }

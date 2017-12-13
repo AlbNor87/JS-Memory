@@ -1,11 +1,4 @@
 "use strict";
-//Still left to do:
-// Try in firefox *
-// Comment code
-// Test on friends computers
-// Add readme with installation instructions
-// läs igenom kravlistan på git
-// .editorconfig
 
 //This is the array tha holds all of the memory cards
 const cardArray = [
